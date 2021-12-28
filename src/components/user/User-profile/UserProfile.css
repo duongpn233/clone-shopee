@@ -1,0 +1,291 @@
+.user-profile
+{
+    background-color: #fff;
+    flex: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px 24px;
+    margin-right: 10px;
+}
+.user-profile-header
+{
+    border-bottom: 1px solid rgb(235, 234, 234);
+    padding-bottom: 21px;
+}
+.user-profile-header-title
+{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0 0 10px;
+}
+.user-profile-header-sub
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(83, 82, 82);
+}
+.user-profile-edit
+{
+    display: flex;
+}
+.user-profile-edit-info
+{
+    padding: 24px 8px 0;
+    width: 70%;
+}
+.user-profile-edit-info-username,
+.user-profile-edit-info-name,
+.user-profile-edit-info-email,
+.user-profile-edit-info-phone,
+.user-profile-edit-info-shopname,
+.user-profile-edit-info-gender,
+.user-profile-edit-info-dateofbirth
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.user-profile-edit-info-username-title,
+.user-profile-edit-info-name-title,
+.user-profile-edit-info-email-title,
+.user-profile-edit-info-phone-title,
+.user-profile-edit-info-shopname-title,
+.user-profile-edit-info-gender-title,
+.user-profile-edit-info-dateofbirth-title
+{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(83, 82, 82);
+    width: 20%;
+}
+.user-profile-edit-info-username-value
+{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.user-profile-edit-info-name-wrap,
+.user-profile-edit-info-shopname-wrap
+{
+    height: 36px;
+    width: 400px;
+}
+.user-profile-edit-info-name-value,
+.user-profile-edit-info-shopname-value
+{
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    padding: 0 10px; 
+    border: 1px solid rgb(214, 213, 213);
+    border-radius: 3px;
+}
+.user-profile-edit-info-name-value:focus,
+.user-profile-edit-info-shopname-value:focus
+{
+    outline: 1px solid rgb(109, 109, 109);
+}
+.user-profile-edit-info-email-wrap,
+.user-profile-edit-info-phone-wrap
+{
+    display: flex;
+    align-items: center;
+}
+.user-profile-edit-info-email-value,
+.user-profile-edit-info-email-more,
+.user-profile-edit-info-email-change,
+.user-profile-edit-info-phone-value,
+.user-profile-edit-info-phone-more,
+.user-profile-edit-info-phone-change
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-right: 8px;
+}
+.user-profile-edit-info-email-more,
+.user-profile-edit-info-email-change,
+.user-profile-edit-info-phone-more,
+.user-profile-edit-info-phone-change
+{
+    color: #05a;
+    cursor: pointer;
+}
+.user-profile-edit-info-gender-wrap
+{
+    display: flex;
+    align-items: center;
+}
+.user-profile-edit-info-gender-value
+{
+    display: flex;
+    align-items: center;
+    margin-right: 14px;
+}
+.user-profile-edit-info-gender-radio
+{
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0,0,0,0.26);
+    border-radius: 100%;
+    cursor: pointer;
+}
+.active .user-profile-edit-info-gender-radio
+{
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--primary-color);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active .user-profile-edit-info-gender-radio-inner
+{
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+}
+.user-profile-edit-info-gender-value-text
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-left: 6px;
+}
+.user-profile-edit-info-dateofbirth-wrap
+{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.user-profile-edit-info-dateofbirth-value-block
+{
+    display: flex;
+    padding: 0 10px;
+    border-radius: 2px;
+    width: 26%;
+    border: 1px solid rgb(214, 213, 213);
+    height: 36px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 11px;
+}
+.user-profile-edit-info-dateofbirth-value-block.active
+{
+    border: 1px solid var(--primary-color);
+}
+.user-profile-edit-info-dateofbirth-value-block:hover
+{
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+.user-profile-edit-info-dateofbirth-value,
+.user-profile-edit-info-dateofbirth-icon
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.user-profile-edit-info-dateofbirth-item
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    display: block;
+    padding: 4px 10px;
+}
+.user-profile-edit-info-dateofbirth-item:hover
+{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.user-profile-edit-info-dateofbirth-list
+{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 126px;
+    position: absolute;
+    top: 102%;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+    height: 120px;
+    overflow-y: auto;
+    display: none;
+}
+.active .user-profile-edit-info-dateofbirth-list
+{
+    display: block;
+}
+.user-profile-edit-info-save
+{
+    height: 32px;
+    width: 60px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-profile-edit-info-save:hover
+{
+    cursor: pointer;
+    background-color: #f16c51;
+}
+
+.user-profile-edit-avt
+{
+    padding: 80px 0;
+    flex: 1;
+}
+.user-profile-edit-avt-img-block
+{
+    width: 36%;
+    margin: auto;
+}
+.user-profile-edit-avt-img
+{
+    width: 100%;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 100%;
+}
+.user-profile-edit-avt-input
+{
+    display: none;
+}
+.user-profile-edit-avt-btn
+{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    height: 32px;
+    width: 32%;
+    border: 1px solid rgb(214, 213, 213);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.user-profile-edit-avt-btn:hover
+{
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.user-profile-edit-avt-btn-block
+{
+    margin-top: 24px;
+}

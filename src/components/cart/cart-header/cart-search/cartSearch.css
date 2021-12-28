@@ -1,0 +1,78 @@
+.cart-search
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-search-logo-wrap
+{
+    display: flex;
+    align-items: flex-end;
+}
+.cart-search-logo
+{
+    text-decoration: none;
+    display: block;
+    width: 130px;
+    height: 46px;
+    margin: 0 16px 0 8px;
+    cursor: pointer;
+}
+.cart-search-logo .shopee-svg-icon.icon-shopee-logo
+{
+    fill: #EE4D2D;
+}
+.cart-search-title
+{
+    color: #EE4D2D;
+    text-decoration: none;
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    padding-left: 16px;
+    border-left: 1px solid #EE4D2D;
+    cursor: pointer;
+}
+
+.cart-searchbar-wrap
+{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border: 2px solid #EE4D2D;
+    border-radius: 3px;
+    width: 50%;
+    margin: 0 8px;
+}
+.cart-searchbar-input-wrap
+{
+    padding: 0 8px;
+    height: 100%;
+    flex: 1;
+}
+.cart-searchbar-input
+{
+    height: 100%;
+    border: none;
+    width: 100%;
+    outline: none;
+    color: #333;
+    font-size: 1.4rem;
+}
+.cart-searchbar-icon
+{
+    height: 100%;
+    width: 13.5%;
+    background-color: #EE4D2D;
+    font-size: 1.6rem;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5px;
+    border-radius: 2px;
+    cursor: pointer;
+}

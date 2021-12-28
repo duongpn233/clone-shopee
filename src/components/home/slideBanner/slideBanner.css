@@ -1,0 +1,133 @@
+.home__slide-wrap
+{
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+.home__slide
+{
+    padding-top: 29.5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+}
+.home__slide.first
+{
+    opacity: 1;
+}
+.home__slide.active
+{
+    animation: goIntoX 1s ease forwards;
+}
+.home__slide.out
+{
+    animation: goOutX 1.005s ease ;
+}
+.home__slide-btn
+{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+}
+.home__slide-icon
+{
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    border: 1px solid rgb(145, 142, 142);
+    padding:  4px;
+    margin: 0 12px;
+    background-color: rgba(238, 235, 235, 0.5);
+    cursor: pointer;
+}
+.home__slide-icon.active
+{
+    background-color: #EE4D2D;
+} 
+.home__slide-static
+{
+    padding-top: 28.6%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home__slide-static-wrap
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.home__slide-btn-next
+{
+    width: 20px;
+    height: 36px;
+    background-color: rgba(102, 101, 101, 0.5);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.home__slide-btn-prev
+{
+    width: 20px;
+    height: 36px;
+    background-color: rgba(102, 101, 101, 0.5);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.home__slide-btn-icon
+{
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 36px;
+    
+}
+.home__slide-wrap:hover .home__slide-btn-next
+{
+    display: block;
+}
+.home__slide-wrap:hover .home__slide-btn-prev
+{
+    display: block;
+}
+
+@keyframes goIntoX
+{
+    from
+    {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    to
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes goOutX
+{
+    from
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to
+    {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+}

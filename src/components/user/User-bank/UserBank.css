@@ -1,0 +1,170 @@
+.user-bank
+{
+    background-color: #fff;
+    flex: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px 24px;
+    margin-right: 10px;
+}
+.user-bank-account
+{
+    padding-bottom: 12px;
+}
+.user-bank-header
+{
+    border-bottom: 1px solid rgb(235, 234, 234);
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.user-bank-header-title
+{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 14px 0;
+}
+.user-bank-header-add
+{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 10px 10px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+.user-bank-header-add:hover
+{
+    cursor: pointer;
+    background-color: #f56d51;
+}
+.user-bank-account-contain,
+.user-bank-credit-contain
+{
+    padding: 24px 0;
+}
+.user-bank-account-item
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+.user-bank-account-item-info
+{
+    width: 24%;
+}
+.user-bank-account-item-img-wrap
+{
+    width: 48px;
+    height: 48px;
+    padding: 2px;
+    border: 1px solid rgba(0,0,0,0.14);
+}
+.user-bank-account-item-img
+{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.user-bank-account-item-name-group
+{
+    display: flex;
+    align-items: center;
+}
+.user-bank-account-item-name
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0;
+}
+.user-bank-account-item-default
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: #00bfa5;
+    padding: 1px 4px;
+    margin-left: 12px;
+    border-radius: 2px;
+    display: none;
+}
+.default .user-bank-account-item-default
+{
+    display: block;
+}
+.user-bank-account-item-user,
+.user-bank-account-item-area,
+.user-bank-account-item-branch
+{
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+}
+.user-bank-account-item-user-title,
+.user-bank-account-item-area-title,
+.user-bank-account-item-branch-title
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(0,0,0,0.54);
+    width: 34%;
+}
+.user-bank-account-item-user-name,
+.user-bank-account-item-area-value,
+.user-bank-account-item-branch-value
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.user-bank-account-item-no,
+.user-bank-account-item-delete
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.user-bank-account-item-delete:hover
+{
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.user-bank-account-item-establish
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    padding: 4px 6px;
+    border: 1px solid rgba(0,0,0,0.09);
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 3%);
+    border-radius: 2px;
+}
+.user-bank-account-item-establish:hover
+{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.default .user-bank-account-item-establish
+{
+    color: #ccc;
+}
+.default .user-bank-account-item-establish:hover
+{
+    cursor: not-allowed;
+    background-color: #fff;
+}
+
+.user-bank-credit-mess
+{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+}

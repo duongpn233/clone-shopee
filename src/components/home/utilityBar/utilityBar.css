@@ -1,0 +1,53 @@
+.home__utility-col
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 20px 0;
+}
+.home__utility
+{
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+.home__utility-wrap
+{
+    width: 8.5%;
+    text-align: center;
+}
+.home__utility-wrap:hover
+{
+    cursor: pointer;
+    animation: move 0.3s linear forwards;
+    
+}
+.home__utility-text
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: block;
+    color: #333;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+   line-height: 1.8rem;        
+   
+}
+
+@keyframes move 
+{
+    from
+    {
+        transform: translateY(0);
+    }
+    to
+    {
+        transform: translateY(-4px);
+    }
+}

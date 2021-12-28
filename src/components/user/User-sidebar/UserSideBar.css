@@ -1,0 +1,117 @@
+.user-sidebar-info
+{
+    display: flex;
+    align-items: center;
+    padding: 16px 8px 24px;
+    border-bottom: 1px solid rgb(235, 234, 234);
+}
+.user-sidebar-avt
+{
+    width: 44px;
+    height: 44px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 1px solid rgb(212, 212, 212);
+}
+.user-sidebar-name-group
+{
+    margin-left: 12px;
+    width: 64%;
+}
+.user-sidebar-name
+{
+    margin: 0 0 4px 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.user-sidebar-edit-icon
+{
+    color: rgb(177, 174, 174);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.user-sidebar-edit-title
+{
+    display: inline-block;
+    color: rgb(134, 133, 133);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-left: 4px;
+    cursor: pointer;
+}
+.user-sidebar-navbar
+{
+    padding: 24px 8px;
+}
+.user-sidebar-acc,
+.user-sidebar-oder,
+.user-sidebar-notifi,
+.user-sidebar-voucher,
+.user-sidebar-coin
+{
+    display: flex;
+    padding-bottom: 12px;
+}
+.user-sidebar-acc-icon,
+.user-sidebar-oder-icon,
+.user-sidebar-notifi-icon,
+.user-sidebar-voucher-icon,
+.user-sidebar-coin-icon
+{
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+.user-sidebar-acc-title,
+.user-sidebar-oder-title,
+.user-sidebar-notifi-title,
+.user-sidebar-voucher-title,
+.user-sidebar-coin-title
+{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgb(82, 82, 82);
+    margin: 0;
+    padding: 2px 0;
+}
+.user-sidebar-acc-title:hover,
+.user-sidebar-oder-title:hover,
+.user-sidebar-notifi-title:hover,
+.user-sidebar-voucher-title:hover,
+.user-sidebar-coin-title:hover
+{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.user-sidebar-acc-profile,
+.user-sidebar-acc-bank,
+.user-sidebar-acc-address,
+.user-sidebar-acc-pass
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(104, 103, 103);
+    display: block;
+    padding: 5px 0;
+}
+.user-sidebar-acc-profile:hover,
+.user-sidebar-acc-bank:hover,
+.user-sidebar-acc-address:hover,
+.user-sidebar-acc-pass:hover
+{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.user-sidebar-acc-profile.active
+{
+    color: var(--primary-color);
+}

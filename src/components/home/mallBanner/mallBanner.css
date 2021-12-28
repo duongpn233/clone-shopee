@@ -1,0 +1,236 @@
+.home__mall-title-wrap
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(223, 220, 220);
+}
+.home__mall-title
+{
+    display: flex;
+    align-items: center;
+}
+.home__mall-title-text
+{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #d0011b;
+    margin: 0;
+    padding: 0 18px;
+    border-right: 1px solid rgb(211, 211, 211);
+    cursor: pointer;
+}
+.home__mall-title-item
+{
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.home__mall-title-item-icon
+{
+    height: 18px;
+    width: 18px;
+}
+.home__mall-title-item-text
+{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #333;
+    display: block;
+    margin-left: 6px;
+}
+.home__mall-title-show
+{
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    cursor: pointer;
+}
+.home__mall-title-show-text
+{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #d0011b;
+    margin: 0 6px 0 0;
+}
+.home__mall-title-show-icon
+{
+    font-size: 1.4rem;
+    color: #d0011b;
+}
+
+
+.home__mall-details-wrap
+{
+    display: flex;
+    background-color: #fff;
+    padding-top: 10px;
+}
+.home__mall-details-slide-wrap
+{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.home__mall-details-img
+{
+    padding-top: 119.4%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.home__mall-details-img.first
+{
+    opacity: 1;
+}
+.home__mall-details-img.active
+{
+    animation: goIntoX 1s ease forwards;
+}
+.home__mall-details-img.out
+{
+    animation: goOutX 1.005s ease ;
+}
+.home__mall-details-btn
+{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+}
+.home__mall-details-icon
+{
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    border: 1px solid rgb(145, 142, 142);
+    padding:  4px;
+    margin: 0 12px;
+    background-color: rgba(238, 235, 235, 0.5);
+    cursor: pointer;
+}
+.home__mall-details-icon.active
+{
+    background-color: #EE4D2D;
+}
+.home__mall-details-btn-next
+{
+    width: 20px;
+    height: 36px;
+    background-color: rgba(102, 101, 101, 0.5);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.home__mall-details-btn-prev
+{
+    width: 20px;
+    height: 36px;
+    background-color: rgba(102, 101, 101, 0.5);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.home__mall-details-btn-icon
+{
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 36px;
+}
+.home__mall-details-slide-wrap:hover .home__mall-details-btn-next
+{
+    display: block;
+}
+.home__mall-details-slide-wrap:hover .home__mall-details-btn-prev
+{
+    display: block;
+}
+
+.home__mall-details-category
+{
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 12px;
+}
+.home__mall-details-category-img
+{
+    padding-top: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home__mall-details-category-title
+{
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #d0011b;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; 
+    height: 2rem;  
+    line-height: 2rem;
+    
+}
+
+.home__mall-details-category:hover
+{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    animation: move 0.3s linear forwards;
+}
+
+@keyframes move 
+{
+    from
+    {
+        transform: translateY(0);
+    }
+    to
+    {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes goIntoX
+{
+    from
+    {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    to
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes goOutX
+{
+    from
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to
+    {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,10 @@
+.cart-header-navbar-wrap
+{
+    background-image: linear-gradient(0,#fe6433, #f53e2d);
+}
+.cart-header-search-wrap
+{
+    height: 82px;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,164 @@
+.user-pass
+{
+    background-color: #fff;
+    flex: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px 24px;
+    margin-right: 10px;
+}
+.user-pass-header
+{
+    border-bottom: 1px solid rgb(235, 234, 234);
+    padding-bottom: 21px;
+}
+.user-pass-header-title
+{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0 0 10px;
+}
+.user-pass-header-sub
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(83, 82, 82);
+}
+.user-pass-container
+{
+    display: flex;
+    align-items:  center;
+    flex-flow: column;
+    padding: 24px 0;
+}
+.user-pass-newpass-group,
+.user-pass-passconfirm-group,
+.user-pass-code-group
+{
+    margin-bottom: 18px;
+}
+.user-pass-newpass,
+.user-pass-passconfirm,
+.user-pass-code
+{
+    display: flex;
+    align-items: center;
+}
+.user-pass-newpass-title,
+.user-pass-passconfirm-title,
+.user-pass-code-title
+{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(83, 82, 82);
+    width: 140px;
+}
+.user-pass-newpass-input,
+.user-pass-passconfirm-input
+{
+    height: 36px;
+    width: 320px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    padding: 0 10px; 
+    border: 1px solid rgb(214, 213, 213);
+}
+.user-pass-newpass-input:focus,
+.user-pass-passconfirm-input:focus,
+.user-pass-code-input:focus
+{
+    border: 1px solid rgb(150, 150, 150);
+    outline: none;
+}
+.error .user-pass-newpass-input,
+.error .user-pass-passconfirm-input
+{
+    border: 1px solid #ff424f;
+    background: #fff9fa;
+}
+.user-pass-code-input-wrap
+{
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: 36px;
+}
+.user-pass-code-input
+{
+    flex: 1;
+    height: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    padding: 0 10px; 
+    border: 1px solid rgb(214, 213, 213);
+}
+.error .user-pass-code-input
+{
+    border: 1px solid #ff424f;
+    background: #fff9fa;
+}
+.user-pass-code-btn
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #555;
+    width: 38%;
+    height: 100%;
+    background-color: #f7f5f5;
+    border: 1px solid rgb(214, 213, 213);
+    border-left: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.user-pass-newpass-mess,
+.user-pass-passconfirm-mess,
+.user-pass-code-mess
+{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #ff424f;
+}
+.user-pass-newpass-mess-group,
+.user-pass-passconfirm-mess-group,
+.user-pass-code-mess-group
+{
+    display: none;
+    margin-top: 6px;
+}
+.error .user-pass-newpass-mess-group,
+.error .user-pass-passconfirm-mess-group,
+.error .user-pass-code-mess-group
+{
+    display: flex;
+}
+.user-pass-newpass-space,
+.user-pass-passconfirm-space,
+.user-pass-code-space
+{
+    width: 140px;
+    display: block;
+}
+.user-pass-send-btn
+{
+    width: 80px;
+    height: 30px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-pass-send-btn:hover
+{
+    cursor: pointer;
+    background-color: #f07860;
+}

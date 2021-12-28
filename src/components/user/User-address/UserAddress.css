@@ -1,0 +1,176 @@
+.user-address
+{
+    background-color: #fff;
+    flex: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px 24px;
+    margin-right: 10px;
+}
+.user-address-header
+{
+    border-bottom: 1px solid rgb(235, 234, 234);
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.user-address-header-title
+{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 14px 0;
+}
+.user-address-header-add
+{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 10px 10px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+.user-address-header-add:hover
+{
+    cursor: pointer;
+    background-color: #f56d51;
+}
+.user-address-group
+{
+    padding: 30px 0;
+    border-top: 1px solid rgb(235, 234, 234);
+    display: flex;
+    align-items: center;
+
+}
+.user-address-group:first-child
+{
+    border: none;
+}
+.user-address-info
+{
+    padding: 0 8px;
+    width: 80%;
+}
+.user-address-info-name,
+.user-address-info-phone
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.user-address-info-addr
+{
+    display: flex;
+}
+.user-address-info-name-title,
+.user-address-info-phone-title,
+.user-address-info-addr-title
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(85,85,85,0.8);
+    width: 16%;
+}
+.user-address-info-name-value-wrap
+{
+    display: flex;
+    align-items: center;
+}
+.user-address-info-name-default
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: #00bfa5;
+    padding: 1px 4px;
+    margin-left: 12px;
+    border-radius: 2px;
+    display: none;
+}
+.default .user-address-info-name-default
+{
+    display: block;
+}
+.user-address-info-name-value,
+.user-address-info-phone-value
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.user-address-info-addr-group
+{
+    flex: 1;
+}
+.user-address-info-addr-housenumber,
+.user-address-info-addr-ward,
+.user-address-info-addr-district,
+.user-address-info-addr-province
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 1px;
+}
+.user-address-operation
+{
+    padding: 0 8px;
+    flex: 1;
+}
+.user-address-operation-block
+{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.user-address-operation-edit,
+.user-address-operation-delete
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-left: 20px;
+}
+.default .user-address-operation-delete
+{
+    display: none;
+}
+.user-address-operation-edit:hover,
+.user-address-operation-delete:hover
+{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.user-address-operation-set-wrap
+{
+    display: flex;
+    justify-content: end;
+    margin-top: 24px;
+}
+.user-address-operation-set
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    padding: 4px 6px;
+    border: 1px solid rgba(0,0,0,0.09);
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 3%);
+    border-radius: 2px;
+}
+.user-address-operation-set:hover
+{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.default .user-address-operation-set
+{
+    color: #ccc;
+}
+.default .user-address-operation-set:hover
+{
+    cursor: not-allowed;
+    background-color: #fff;
+}
