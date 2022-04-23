@@ -1,11 +1,27 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
 import './UserSideBar.css';
+import { setNumberActive } from '../../../redux/extra/extraSlice';
 function UserSideBar() {
+    const user = useSelector(state => state.user.user);
+    const checkActive = useSelector(state => state.extra.active);
+    const dispatch = useDispatch();
+
+    const handleCheck = (check) => {
+        dispatch(setNumberActive(check));
+    };
+
+    useEffect(()=>{
+
+    }, []);
+
     return (
         <div className="col l-2-4">
             <div className="user-sidebar-info">
-                <div className="user-sidebar-avt" style={{ backgroundImage: 'url(/img/unnamed.png)' }}></div>
+                <div className="user-sidebar-avt" style={{ backgroundImage: `url(${user.avtImg ? user.avtImg : '/img/unnamed.png'})` }}></div>
                 <div className="user-sidebar-name-group">
-                    <h4 className="user-sidebar-name">Ngoc Duong</h4>
+                    <h4 className="user-sidebar-name">{user.userName}</h4>
                     <div className="user-sidebar-edit">
                         <span className="user-sidebar-edit-icon">
                             <i className="fas fa-user-edit"></i>
@@ -20,10 +36,10 @@ function UserSideBar() {
                     <div className='user-sidebar-acc-wrap'>
                         <h4 className='user-sidebar-acc-title'>Tài khoản của tôi</h4>
                         <div className='user-sidebar-acc-list'>
-                            <span className='user-sidebar-acc-profile active'>Hồ sơ</span>
-                            <span className='user-sidebar-acc-bank'>Ngân hàng</span>
-                            <span className='user-sidebar-acc-address'>Địa chỉ</span>
-                            <span className='user-sidebar-acc-pass'>Đổi mật khẩu</span>
+                            <Link to='/user/profile' className={`user-sidebar-acc-profile ${checkActive === 1 ? 'active' : ''}`} onClick={()=>{handleCheck(1)}}>Hồ sơ</Link>
+                            <Link to='/user/bank' className={`user-sidebar-acc-bank ${checkActive === 2 ? 'active' : ''}`} onClick={()=>{handleCheck(2)}}>Ngân hàng</Link>
+                            <Link to='/user/address' className={`user-sidebar-acc-address ${checkActive === 3 ? 'active' : ''}`} onClick={()=>{handleCheck(3)}}>Địa chỉ</Link>
+                            <Link to='/user/pass' className={`user-sidebar-acc-pass ${checkActive === 4 ? 'active' : ''}`} onClick={()=>{handleCheck(4)}}>Đổi mật khẩu</Link>
                         </div>
                     </div>
                 </div>

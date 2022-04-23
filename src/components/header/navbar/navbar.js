@@ -12,7 +12,10 @@ function Navbar({ user }) {
         if(window.location.pathname === '/cart'){
             history.replace('/login');
         }
-    }
+        else if(window.location.pathname === '/user/profile'){
+            history.replace('/home');
+        }
+    };
 
     if (user) {
         return (
@@ -122,12 +125,12 @@ function Navbar({ user }) {
                         </Link>
                         <Link to="/login" className={`list__item list__item--strong list__item--login ${user.userName ? 'hide' : ''}`}>Đăng nhập</Link>
                         <li className={`list__item list__item-user ${user.userName ? '' : 'hide'}`}>
-                            <img src="https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg"
+                            <img src={`${user.avtImg ? user.avtImg : '/img/unnamed.png'}`}
                                 alt="" className="list__item-img" />
                             <span className="list__item-name">{user.userName}</span>
                             <ul className="list__item-menu">
                                 <li className="list__item-menu-optional">
-                                    <a href="true">Tài khoản của tôi</a>
+                                    <Link to="/user/profile">Tài khoản của tôi</Link>
                                 </li>
                                 <li className="list__item-menu-optional">
                                     <a href="true">Đơn mua</a>

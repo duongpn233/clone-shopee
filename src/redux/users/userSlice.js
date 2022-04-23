@@ -33,12 +33,27 @@ export const getUser = createAsyncThunk('user/getUser', async (data, thunkApi) =
   return res.data;
 });
 
+export const updateUser = createAsyncThunk('user/updateUser', async (data, thunkApi) => {
+  const res = await usersApi.update(data);
+  return res.data;
+});
+
+export const getCode = createAsyncThunk('user/getCode', async (data, thunkApi) => {
+  const res = await usersApi.getCode();
+  return res.data;
+});
+
+export const changePass = createAsyncThunk('user/changePass', async (data, thunkApi) => {
+  const res = await usersApi.changePass(data);
+  return res.data;
+});
+
 const userSlice = createSlice({
   name: 'user',
   initialState: {
     user: {},
     loading: false,
-    error: ''
+    error: {}
   },
   reducers: {
     logOut(state) {
@@ -76,7 +91,6 @@ const userSlice = createSlice({
       state.user = action.payload;
     },
     [signUpAndSignInWithGoogle.rejected]: (state, action) => {
-      console.log(action.error);
       state.loading = false;
       state.error = {
         message: action.error.message
@@ -87,7 +101,28 @@ const userSlice = createSlice({
       state.user = action.payload;
     },
     [getUser.rejected]: (state, action) => {
-      console.log(action.error);
+      state.loading = false;
+      state.error = {
+        message: action.error.message
+      };
+    },
+    [updateUser.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.user = action.payload;
+    },
+    [updateUser.rejected]: (state, action) => {
+      state.loading = false;
+      state.error = {
+        message: action.error.message
+      };
+    },
+    [getCode.rejected]: (state, action) => {
+      state.loading = false;
+      state.error = {
+        message: action.error.message
+      };
+    },
+    [changePass.rejected]: (state, action) => {
       state.loading = false;
       state.error = {
         message: action.error.message

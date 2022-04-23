@@ -26,7 +26,7 @@ function validation(values) {
         else if (!regexUserName.test(values.userName)) {
             error.userName = "Trường này không được phép có ký tự đặc biệt";
         }
-        
+
         if (!values.passConfirm) {
             error.passConfirm = "Trường này là bắt buộc";
         }
@@ -39,7 +39,7 @@ function validation(values) {
     }
 
     return error;
-}
+};
 
 function blurValidation(name, values, error) {
     let regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -90,7 +90,85 @@ function blurValidation(name, values, error) {
     }
 
     return cloneError;
+};
+
+function validationChangePass(values) {
+    const regexOTP = /^\w+(\s\w+)*$/;
+    let error = {};
+    if (!values.pass) {
+        error.pass = "Trường này là bắt buộc";
+    }
+    else if (values.pass.length < 6) {
+        error.pass = "Nhập tối thiểu sáu kí tự";
+    }
+
+    if (!values.passConfirm) {
+        error.passConfirm = "Trường này là bắt buộc";
+    }
+    else if (values.passConfirm !== values.pass) {
+        error.passConfirm = "Mật khẩu không trùng khớp";
+    }
+    else if (values.passConfirm.length < 6) {
+        error.passConfirm = "Nhập tối thiểu sáu kí tự";
+    }
+
+    if (!values.OTP) {
+        error.OTP = "Trường này là bắt buộc";
+    }
+    else if (!regexOTP.test(values.OTP)) {
+        error.OTP = "Trường này không được phép có ký tự đặc biệt";
+    }
+
+    return error;
+};
+
+function blurChangePass(name, values, error) {
+    const regexOTP = /^\w+(\s\w+)*$/;
+    let cloneError = { ...error };
+    if (name === 'OTP') {
+        if (!values.OTP) {
+            cloneError.OTP = "Trường này là bắt buộc";
+        }
+        else if (!regexOTP.test(values.OTP)) {
+            cloneError.OTP = "Trường này không được phép có ký tự đặc biệt";
+        }
+    }
+    else if (name === 'pass') {
+        if (!values.pass) {
+            cloneError.pass = "Trường này là bắt buộc";
+        }
+        else if (values.pass.length < 6) {
+            cloneError.pass = "Nhập tối thiểu sáu kí tự";
+            if (values.pass === values.passConfirm) {
+                cloneError.passConfirm = "Nhập tối thiểu sáu kí tự";
+            }
+            else if (values.passConfirm && values.pass !== values.passConfirm) {
+                cloneError.passConfirm = "Mật khẩu không trùng khớp";
+            }
+        }
+        else {
+            if (values.pass === values.passConfirm && cloneError.passConfirm) {
+                delete cloneError.passConfirm;
+            }
+            else if (values.passConfirm && values.pass !== values.passConfirm) {
+                cloneError.passConfirm = "Mật khẩu không trùng khớp";
+            }
+        }
+    }
+    else if (name === 'passConfirm') {
+        if (!values.passConfirm) {
+            cloneError.passConfirm = "Trường này là bắt buộc";
+        }
+        else if (values.passConfirm !== values.pass) {
+            cloneError.passConfirm = "Mật khẩu không trùng khớp";
+        }
+        else if (values.passConfirm.length < 6) {
+            cloneError.passConfirm = "Nhập tối thiểu sáu kí tự";
+        }
+    }
+
+    return cloneError;
 }
 
 export default validation;
-export { blurValidation };
+export { blurValidation, validationChangePass, blurChangePass };

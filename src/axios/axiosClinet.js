@@ -30,6 +30,18 @@ axiosClient.interceptors.response.use((response) => {
     else if (error.response.data.error.message === 'correct account or password'){
         throw new Error('Correct account or password');
     }
+    else if (error.response.data.error.message === "OTP timeout"){
+        throw new Error("OTP timeout");
+    }
+    else if (error.response.data.error.message === "OTP code is incorrect"){
+        throw new Error("OTP code is incorrect");
+    }
+    else if (error.response.data.error.message === "Login account is google account"){
+        throw new Error("Login account is google account");
+    }
+    else if (error.response.data.error.message === 'Login session has expired'){
+        throw new Error('Login session has expired');
+    }
     else {
         throw error;
     }
